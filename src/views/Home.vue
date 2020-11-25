@@ -27,7 +27,7 @@ export default class Home extends Vue {
     console.log(canvas, imgs)
     setTimeout(() => {
       this.colors = this.setWheelBgtcMainTonal(canvas, imgs)
-    }, 1000)
+    }, 200)
     
     
   }
