@@ -39,18 +39,10 @@ export default class ImageSetBackground extends Vue {
     const imgs_d = document.getElementById('tplWheelBg_d')
     setTimeout(() => {
       this.colors_a = this.setWheelBgtcMainTonal(canvas, imgs_a)
-    }, 50)
-    setTimeout(() => {
       this.colors_b = this.setWheelBgtcMainTonal(canvas, imgs_b)
-    }, 50)
-    setTimeout(() => {
       this.colors_c = this.setWheelBgtcMainTonal(canvas, imgs_c)
-    }, 50)
-    setTimeout(() => {
       this.colors_d = this.setWheelBgtcMainTonal(canvas, imgs_d)
-    }, 50)
-    
-    
+    }, 20)
   }
 
   setWheelBgtcMainTonal(canvas: any, img: any) {
