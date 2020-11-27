@@ -19,6 +19,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/imagesetbackground',
     name: 'ImageSetBackground',
     component: () => import('../views/ImageSetBackground.vue')
+  },
+  {
+    path: '/test',
+    name: 'Test',
+    component: () => import('../views/Test.vue')
   }
 ]
 
