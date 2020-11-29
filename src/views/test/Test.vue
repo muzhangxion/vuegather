@@ -12,12 +12,12 @@ import { Options, Vue } from 'vue-class-component'
 })
 
 export default class Test extends Vue {
-
-  mounted () {}
-  
+  mounted () {
+    console.log('Test')
+  }
 }
 </script>
 
 <style lang="less">
- 
+
 </style>

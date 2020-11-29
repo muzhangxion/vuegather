@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../views/Home.vue'
+import routerList from './routers' // 1、引入路由数组
 
 const routes: Array<RouteRecordRaw> = [
+  ...routerList, // 2、将路由数组合并到vue路由配置中
   {
     path: '/',
     name: 'Home',
@@ -23,7 +25,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/test',
     name: 'Test',
-    component: () => import('../views/Test.vue')
+    component: () => import('../views/test/Test.vue')
   }
 ]
 
