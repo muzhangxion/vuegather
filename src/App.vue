@@ -1,7 +1,11 @@
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">About</router-link> |
+    <router-link to="/test">test</router-link> |
+    <router-link to="/imagesetbackground">ImageSetBackground</router-link> |
+    <router-link to="/Automaticrouting">Automaticrouting</router-link> |
+    <router-link to="/Upload">Upload</router-link>
   </div>
   <router-view/>
 </template>
@@ -16,9 +20,16 @@
 }
 
 #nav {
-  padding: 30px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #e6e6e6;
 
   a {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
     font-weight: bold;
     color: #2c3e50;
 
