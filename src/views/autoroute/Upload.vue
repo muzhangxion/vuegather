@@ -4,15 +4,16 @@
     <ul class="upload_box">
         <li class="upload_img"></li>
         <li class="upload_img upload_add">
-            <div class="icon_line top_d" @click="centerUploadBox">
+            <div class="icon_line top_d" @click="centerUploadBox()" title="upfile">
                 <div class="icon_line vertical"></div>
                 <div class="icon_line cross"></div>
             </div>
-            <input class="icon_line file_s" type="file" id="batchUpload" name="files"
+            <input ref="upfile" name="file" class="icon_line file_s" type="file" id="batchUpload"
                 accept="image/jpg, image/gif,image/png, image/jpeg"
                 multiple="multiple">
         </li>
     </ul>
+
   </div>
 </template>
 
@@ -29,8 +30,9 @@ export default class Upload extends Vue {
   }
 
   centerUploadBox () {
-    console.log('aaa')
+    this.$refs.upfile.dispatchEvent(new MouseEvent('click'))
   }
+
 }
 </script>
 
