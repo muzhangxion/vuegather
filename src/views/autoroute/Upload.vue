@@ -8,7 +8,7 @@
                 <div class="icon_line vertical"></div>
                 <div class="icon_line cross"></div>
             </div>
-            <input ref="upfile" name="file" class="icon_line file_s" type="file" id="batchUpload"
+            <input ref="upfile" @change="upload($event)" name="file" class="icon_line file_s" type="file" id="batchUpload"
                 accept="image/jpg, image/gif,image/png, image/jpeg"
                 multiple="multiple">
         </li>
@@ -33,6 +33,9 @@ export default class Upload extends Vue {
     this.$refs.upfile.dispatchEvent(new MouseEvent('click'))
   }
 
+  upload (event: any) {
+    console.log(event, 1111)
+  }
 }
 </script>
 
