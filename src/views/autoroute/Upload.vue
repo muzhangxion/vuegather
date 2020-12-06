@@ -37,7 +37,7 @@ import { Options, Vue } from 'vue-class-component'
   components: {}
 })
 export default class Upload extends Vue {
-  imgsback = [] // 图片预览地址
+  imgsback: Array<any> = [] // 图片预览地址
   imgfilesback = [] // 图片原文件，上传到后台的数据
   sizeback = 1 // 限制上传数量
   mounted () {
@@ -58,19 +58,19 @@ export default class Upload extends Vue {
   fileChangeback (e) {
     // 加入图片
     // 图片预览部分
-    const vm = this
-    var event = event || window.event
+    const them = this
+    const event = event || window.event
     const file = event.target.files
     const leng = file.length
     for (let i = 0; i < leng; i++) {
       const reader = new FileReader() // 使用 FileReader 来获取图片路径及预览效果
-      vm.imgfilesback.push(file[i])
+      this.imgfilesback.push(file[i])
       reader.readAsDataURL(file[i])
       reader.onload = function (e) {
-        vm.imgsback.push(e.target.result) // base 64 图片地址形成预览
+        them.imgsback.push(e.target.result) // base 64 图片地址形成预览
       }
     }
-    console.log(vm.imgsback, 111)
+    console.log(this.imgsback, 111)
   }
 }
 </script>
