@@ -63,11 +63,11 @@ export default class Upload extends Vue {
     const file = event.target.files
     const leng = file.length
     for (let i = 0; i < leng; i++) {
-      const reader = new FileReader() // 使用 FileReader 来获取图片路径及预览效果
+      const reader = new FileReader() // 使用FileReader 来获取图片路径及预览效果
       this.imgfilesback.push(file[i])
       reader.readAsDataURL(file[i])
       reader.onload = function (e) {
-        them.imgsback.push(e.target.result) // base 64 图片地址形成预览
+        them.imgsback.push(e.target.result) // base64图片地址形成预览
       }
     }
     console.log(this.imgsback, 111)
