@@ -70,7 +70,7 @@ export default class Upload extends Vue {
         them.imgsback.push(e.target.result) // base64图片地址形成预览
       }
     }
-    console.log(this.imgsback, 111)
+    console.log(this.imgsback)
   }
 }
 </script>
