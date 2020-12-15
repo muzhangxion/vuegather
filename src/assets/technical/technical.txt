@@ -1,4 +1,4 @@
-新建项目：vue init webpack ”项目名称“ || vue create ”项目名称“
+新建项目：vue init webpack ”项目名称“ 或者 vue create ”项目名称“
 
 项目目结构：
 ├── public                     # 静态资源
