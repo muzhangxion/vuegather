@@ -43,35 +43,6 @@ export default class Upload extends Vue {
   mounted () {
     console.log('Upload')
   }
-
-  centerUploadBox () {
-    this.$refs.upfile.dispatchEvent(new MouseEvent('click'))
-  }
-
-  // 删除图片的方法
-  delimgback (i) {
-    this.imgfilesback.splice(i, 1)
-    this.imgsback.splice(i, 1)
-  }
-
-  /* 图片上传--预览 */
-  fileChangeback (e) {
-    // 加入图片
-    // 图片预览部分
-    const them = this
-    const event = event || window.event
-    const file = event.target.files
-    const leng = file.length
-    for (let i = 0; i < leng; i++) {
-      const reader = new FileReader() // 使用FileReader 来获取图片路径及预览效果
-      this.imgfilesback.push(file[i])
-      reader.readAsDataURL(file[i])
-      reader.onload = function (e) {
-        them.imgsback.push(e.target.result) // base64图片地址形成预览
-      }
-    }
-    console.log(this.imgsback)
-  }
 }
 </script>
 
