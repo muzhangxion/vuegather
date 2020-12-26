@@ -38,8 +38,6 @@ import { Options, Vue } from 'vue-class-component'
 })
 export default class Upload extends Vue {
   imgsback: Array<any> = [] // 图片预览地址
-  imgfilesback = [] // 图片原文件，上传到后台的数据
-  sizeback = 1 // 限制上传数量
   mounted () {
     console.log('Upload')
   }
