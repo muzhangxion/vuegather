@@ -17,14 +17,14 @@
           <div class="icon_line vertical"></div>
           <div class="icon_line cross"></div>
         </div>
-        <input ref="upfile"
-               @change="fileChangeback($event)"
-               name="file"
-               class="icon_line file_s"
-               type="file"
-               id="batchUpload"
-               accept="image/jpg, image/gif,image/png, image/jpeg"
-               multiple="multiple" />
+        <input 
+            @change="fileChangeback($event)"
+            name="file"
+            class="icon_line file_s"
+            type="file"
+            id="batchUpload"
+            accept="image/jpg, image/gif,image/png, image/jpeg"
+            multiple="multiple" />
       </li>
     </ul>
   </div>
