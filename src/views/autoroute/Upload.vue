@@ -17,7 +17,7 @@
           <div class="icon_line vertical"></div>
           <div class="icon_line cross"></div>
         </div>
-        <input 
+        <input
             @change="fileChangeback($event)"
             name="file"
             class="icon_line file_s"
@@ -36,6 +36,7 @@ import { Options, Vue } from 'vue-class-component'
 @Options({
   components: {}
 })
+
 export default class Upload extends Vue {
   imgsback: Array<any> = [] // 图片预览地址
   mounted () {
