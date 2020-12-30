@@ -39,9 +39,11 @@ import { Options, Vue } from 'vue-class-component'
 
 export default class Upload extends Vue {
   imgsback: Array<any> = [] // 图片预览地址
+
   mounted () {
     console.log('Upload')
   }
+  
 }
 </script>
 
