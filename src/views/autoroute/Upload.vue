@@ -5,9 +5,7 @@
       <li class="upload_img"
           v-for="(item, i) in imgsback"
           :key="i">
-        <img class="img"
-             :src="item"
-             alt="" />
+        <img class="img" :src="item" alt="" />
         <span @click="delimgback(i)"><i class="el-icon-delete"></i></span>
       </li>
       <li class="upload_img upload_add">
@@ -39,11 +37,9 @@ import { Options, Vue } from 'vue-class-component'
 
 export default class Upload extends Vue {
   imgsback: Array<any> = [] // 图片预览地址
-
   mounted () {
     console.log('Upload')
   }
-  
 }
 </script>
 
