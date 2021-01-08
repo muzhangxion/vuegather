@@ -5,7 +5,7 @@
       <li class="upload_img"
           v-for="(item, i) in imgsback"
           :key="i">
-        <img class="img" :src="item" alt="" />
+        <img class="img" :src="item" alt="图片" />
         <span @click="delimgback(i)"><i class="el-icon-delete"></i></span>
       </li>
       <li class="upload_img upload_add">
