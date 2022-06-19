@@ -1,13 +1,16 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/test">test</router-link> |
-    <router-link to="/imagesetbackground">ImageSetBackground</router-link> |
-    <router-link to="/Automaticrouting">Automaticrouting</router-link> |
-    <router-link to="/Upload">Upload</router-link>
+  <div>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> |
+      <router-link to="/test">test</router-link> |
+      <router-link to="/imagesetbackground">ImageSetBackground</router-link> |
+      <router-link to="/Automaticrouting">Automaticrouting</router-link> |
+      <router-link to="/Upload">Upload</router-link>
+      <router-link to="/testVideo">Video</router-link>
+    </div>
+    <router-view/>
   </div>
-  <router-view/>
 </template>
 
 <style lang="less">

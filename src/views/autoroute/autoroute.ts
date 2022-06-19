@@ -3,7 +3,6 @@
 const files = require.context('./', true, /\.vue$/);
 
 const autoroute: any = {};
-
 files.keys().forEach((key) => {
   ///3、通过正则将文件名作为属性名来保存文件
   autoroute[key.replace(/(\.\/|\.vue)/g, '')] = files(key).default;

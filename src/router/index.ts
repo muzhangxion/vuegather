@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../views/Home.vue'
 import routerList from './routers' // 1、引入路由数组
-
 const routes: Array<RouteRecordRaw> = [
   ...routerList, // 2、将路由数组合并到vue路由配置中
   {
@@ -20,12 +19,12 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/imagesetbackground',
     name: 'ImageSetBackground',
-    component: () => import('../views/ImageSetBackground.vue')
+    component: () => import('~@/views/ImageSetBackground.vue')
   },
   {
     path: '/test',
     name: 'Test',
-    component: () => import('../views/test/Test.vue')
+    component: () => import('~@/views/test/Test.vue')
   }
 ]
 
