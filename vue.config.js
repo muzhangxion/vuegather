@@ -7,7 +7,7 @@ module.exports = {
   lintOnSave: false,
   devServer: {
     port: 8888,
-    open: true
+    open: 'http://localhost:8888'
   },
   chainWebpack(config) {
     config.resolve.alias
