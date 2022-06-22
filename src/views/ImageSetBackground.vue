@@ -1,16 +1,19 @@
 <template>
-  <div class="ImageSetBackground" :style="{background: colors_a}">
-    <img id="tplWheelBg_a" class="img_s" alt="Vue logo" src="../assets/a.jpg">
+  <div class="backimg_box">
+    <div class="ImageSetBackground" :style="{background: colors_a}">
+      <img id="tplWheelBg_a" class="img_s" alt="Vue logo" src="../assets/a.jpg">
+    </div>
+    <div class="ImageSetBackground" :style="{background: colors_b}">
+      <img id="tplWheelBg_b" class="img_s" alt="Vue logo" src="../assets/b.jpg">
+    </div>
+    <div class="ImageSetBackground" :style="{background: colors_c}">
+      <img id="tplWheelBg_c" class="img_s" alt="Vue logo" src="../assets/c.jpg">
+    </div>
+    <div class="ImageSetBackground" :style="{background: colors_d}">
+      <img id="tplWheelBg_d" class="img_s" alt="Vue logo" src="../assets/d.jpg">
+    </div>
   </div>
-  <div class="ImageSetBackground" :style="{background: colors_b}">
-    <img id="tplWheelBg_b" class="img_s" alt="Vue logo" src="../assets/b.jpg">
-  </div>
-  <div class="ImageSetBackground" :style="{background: colors_c}">
-    <img id="tplWheelBg_c" class="img_s" alt="Vue logo" src="../assets/c.jpg">
-  </div>
-  <div class="ImageSetBackground" :style="{background: colors_d}">
-    <img id="tplWheelBg_d" class="img_s" alt="Vue logo" src="../assets/d.jpg">
-  </div>
+  
 </template>
 
 <script lang="ts">
@@ -84,8 +87,17 @@ export default class ImageSetBackground extends Vue {
 </script>
 
 <style lang="less">
- .img_s{
-    width: 500px;
-   height: auto;
- }
+
+.backimg_box{
+  width: 100%;
+  height: 100%;
+  .ImageSetBackground{
+    text-align: center;
+    .img_s{
+        width: 500px;
+        height: auto;
+    }
+  }
+}
+ 
 </style>

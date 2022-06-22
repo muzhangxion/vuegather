@@ -34,7 +34,7 @@
 
     .nav {
       width: 200px;
-      height: 100%;
+      height: auto;
       overflow-y: auto;
       padding: 10px 20px;
       display: flex;
@@ -56,6 +56,8 @@
 
     .content{
       flex: 1;
+      height: 100%;
+      overflow-y: auto;
     }
   }
 }
