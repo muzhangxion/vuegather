@@ -9,12 +9,14 @@
   </div>
 </template>
 
-<style lang="less" scoped>
+<style lang="less">
+body{
+   margin: 0;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 
@@ -32,6 +34,7 @@
       overflow-y: auto;
       padding: 10px 20px;
       background-color: #e6e6e6;
+      text-align: left;
     }
 
     .content{

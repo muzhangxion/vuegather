@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import Global from '@/components/global/global' // 页面文件目录
+import '@/style/style.less'
 
 let app = createApp(App)
 

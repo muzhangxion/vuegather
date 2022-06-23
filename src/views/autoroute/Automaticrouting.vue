@@ -1,5 +1,5 @@
 <template>
-  <div class="autoroute" >
+  <div class="autoroute same_page" >
     <!--自动路由实例地址： https://blog.csdn.net/qq_24800489/article/details/107356071 -->
     这是测试自动路由模块
   </div>
@@ -19,6 +19,6 @@ export default class Automaticrouting extends Vue {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 
 </style>

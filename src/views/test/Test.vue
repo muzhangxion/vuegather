@@ -1,5 +1,5 @@
 <template>
-  <div class="test" >
+  <div class="test same_page" >
     这是准备测试的模块
   </div>
 </template>
@@ -18,6 +18,6 @@ export default class Test extends Vue {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 
 </style>

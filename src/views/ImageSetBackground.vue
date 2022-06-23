@@ -1,5 +1,5 @@
 <template>
-  <div class="backimg_box">
+  <div class="backimg_box same_page">
     <div class="ImageSetBackground" :style="{background: colors_a}">
       <img id="tplWheelBg_a" class="img_s" alt="Vue logo" src="../assets/a.jpg">
     </div>
@@ -86,7 +86,7 @@ export default class ImageSetBackground extends Vue {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 
 .backimg_box{
   width: 100%;

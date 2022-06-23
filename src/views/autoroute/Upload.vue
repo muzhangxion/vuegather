@@ -1,5 +1,5 @@
 <template>
-  <div class="upload">
+  <div class="upload same_page">
     <h1>文件上传</h1>
     <ul class="upload_box">
       <li class="upload_img"
@@ -43,7 +43,7 @@ export default class Upload extends Vue {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 html,
 body,
 p,

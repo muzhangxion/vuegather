@@ -1,5 +1,5 @@
 <template>
-  <div class="video_page" >
+  <div class="video_page same_page" >
     <!-- video问题测试 -->
     <div class="video_box">
       <!-- 属性：
