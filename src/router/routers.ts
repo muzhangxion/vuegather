@@ -1,4 +1,4 @@
-import Autoroute from '../views/autoroute/autoroute' // 页面文件目录
+import Autoroute from '@/views/autoroute/autoroute' // 页面文件目录
 
 let routes: any = [];
 // 通过内置对象Object的keys方法来生成vue可用的路由数组

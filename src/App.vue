@@ -1,13 +1,7 @@
 <template>
   <div class="page">
     <div class="nav">
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
-      <router-link to="/test">test</router-link>
-      <router-link to="/imagesetbackground">ImageSetBackground</router-link>
-      <router-link to="/Automaticrouting">Automaticrouting</router-link>
-      <router-link to="/Upload">Upload</router-link>
-      <router-link to="/testVideo">Video</router-link>
+      <menu-page />
     </div>
     <div class="content">
       <router-view/>
@@ -37,21 +31,7 @@
       height: auto;
       overflow-y: auto;
       padding: 10px 20px;
-      display: flex;
-      flex-direction:column;
       background-color: #e6e6e6;
-
-      a {
-        display: inline-block;
-        height: 40px;
-        line-height: 40px;
-        font-weight: bold;
-        color: #2c3e50;
-
-        &.router-link-exact-active {
-          color: #42b983;
-        }
-      }
     }
 
     .content{
