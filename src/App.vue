@@ -61,19 +61,6 @@ body{
         display: flex;
         justify-content: space-between;
         background-color: #e6e6e6;
-
-        a {
-          display: inline-block;
-          height: 40px;
-          line-height: 40px;
-          font-weight: bold;
-          color: #2c3e50;
-          padding: 0 20px;
-
-          &.router-link-exact-active {
-            color: #42b983;
-          }
-        }
       }
 
       .content{

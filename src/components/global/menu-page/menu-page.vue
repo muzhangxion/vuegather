@@ -27,7 +27,9 @@ export default class Menu extends Vue {
 </script>
 
 <style lang="less" scoped>
-    .menu_page{
+
+@media (min-width: 1024px){
+   .menu_page{
       display: flex;
       flex-direction:column;
         a {
@@ -42,4 +44,26 @@ export default class Menu extends Vue {
           }
         }
     }
+}
+
+@media (max-width: 1023px){
+  .menu_page{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+        a {
+          display: inline-block;
+          height: 40px;
+          line-height: 40px;
+          font-weight: bold;
+          color: #2c3e50;
+          padding: 0 20px;
+
+          &.router-link-exact-active {
+            color: #42b983;
+          }
+        }
+    }
+}
+   
 </style>
