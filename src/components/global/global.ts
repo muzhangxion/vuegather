@@ -5,7 +5,6 @@ const components = require.context('@/components/global', true, /\.vue$/)
 let subassembly: any = [];
 components.keys().forEach(filename => {
   const arr = filename.replace(/\.\//, '').replace(/\.vue$/, '').split('/')
-  console.log(arr, 333)
   const component = components(filename).default
   subassembly.push( {name: arr[0], componentb: component})
 })
