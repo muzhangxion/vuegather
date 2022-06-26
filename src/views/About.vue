@@ -19,13 +19,10 @@ import { computed, reactive } from 'vue'
 
 export default class About extends Vue {
   text: any = '123,456';
-  obj: any = null
 
   mounted () {
     console.log('About')
   }
-
- 
 
 }
 </script>
