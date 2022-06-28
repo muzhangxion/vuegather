@@ -2,7 +2,7 @@
   <div class="menu_page" >
     <router-link to="/">Home</router-link>
     <router-link to="/about">About</router-link>
-    <router-link to="/test">test</router-link>
+    <router-link to="/slot">slot</router-link>
     <router-link to="/imagesetbackground">ImageSetBackground</router-link>
     <router-link to="/Automaticrouting">Automaticrouting</router-link>
     <router-link to="/Upload">Upload</router-link>

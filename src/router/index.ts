@@ -22,9 +22,9 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('~@/views/ImageSetBackground.vue')
   },
   {
-    path: '/test',
-    name: 'Test',
-    component: () => import('~@/views/test/Test.vue')
+    path: '/slot',
+    name: 'slot',
+    component: () => import('~@/views/slot/slot.vue')
   }
 ]
 
