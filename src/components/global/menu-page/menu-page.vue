@@ -7,6 +7,7 @@
     <router-link to="/Automaticrouting">Automaticrouting</router-link>
     <router-link to="/Upload">Upload</router-link>
     <router-link to="/testVideo">Video</router-link>
+    <router-link to="/analysisExcel">analysisExcel</router-link>
   </div>
 </template>
 
