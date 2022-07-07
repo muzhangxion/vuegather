@@ -3,19 +3,19 @@
     <h1>排序算法</h1>
     <div>
       <h4>冒泡排序</h4>
-      <p>{{ bubbling(list) }}</p>
+      <p>{{ bubbling(bubblingList) }}</p>
     </div>
     <div>
       <h4>选择排序</h4>
-      <p>{{ choose(list) }}</p>
+      <p>{{ choose(chooseList) }}</p>
     </div>
     <div>
       <h4>插入排序</h4>
-      <p>{{ choose(list) }}</p>
+      <p>{{ insert(insertList) }}</p>
     </div>
     <div>
       <h4>快速排序</h4>
-      <p>{{ fast(list) }}</p>
+      <p>{{ fast(fastList) }}</p>
     </div>
     <div>
       <h4>归并排序</h4>
@@ -31,7 +31,10 @@ import { Options, Vue } from "vue-class-component";
   components: {},
 })
 export default class Senior extends Vue {
-  list: Array<any> = [1, 4, 6, 2, 67, 45, 0, 11];
+  bubblingList: Array<any> = [1, 4, 6, 2, 67, 45, 0, 11];
+  chooseList: Array<any> = [9, 0, 18, 2, 57, 33, 0, 10];
+  insertList: Array<any> = [5, 4, 9, 11, 23, 8, 35, 11];
+  fastList: Array<any> = [12, 3, 25, 7, 7, 24, 35, 24];
   mergeList: Array<any> = [6,5,7,2,5, 9];
   mounted() {
     console.log("Senior");
@@ -44,6 +47,7 @@ export default class Senior extends Vue {
    * 如果前一个大于后一个值就交换位置，
    * 一趟之后最大的值就排在最后一位了，
    * 然后同理在排序剩下的n-1 ，n-2 …个数代码如下：
+   * [1, 4, 6, 2, 67, 45, 0, 11]
    */
   bubbling(list: any) {
     for (let i = 0; i < list.length; i++) {
@@ -64,6 +68,7 @@ export default class Senior extends Vue {
    * 将数组分为左侧的有序序列如：[a0,…ai]，
    * 和右侧的无序待排序列[a[i+1],…an],
    * 每次将无序序列中选出一个最小值放入到有序序列的最后一个
+   * [9, 0, 18, 2, 57, 33, 0, 10]
    */
   choose(list: any) {
     for (let i = 0; i < list.length - 1; i++) {
@@ -84,6 +89,7 @@ export default class Senior extends Vue {
    * 每次从无序序列中拿出第一个，
    * 然后在有序序列中比较插入到适当的位置，
    * 然后重复操作直到数列完全有序
+   * [5, 4, 9, 11, 23, 8, 35, 11]
    */
   insert(list: any) {
     for (let i = 1; i < list.length; i++) {
@@ -107,6 +113,7 @@ export default class Senior extends Vue {
    * 大于中间值的排在右边，
    * 左边的任意一个值都要小于等于右边数列的值，
    * 然后再分别对左侧和右侧的数列进行分割以此类推，知道整个数列有序
+   *  [12, 3, 25, 7, 7, 24, 35, 24]
    */
   fast(list: any) {
     this.quick(list, 0, list.length-1);
@@ -147,6 +154,7 @@ export default class Senior extends Vue {
    * 归并排序的思维也是对数组进行一分为二分割，
    * 不同的是归并排序不是按照关键值进行分割，
    * 而是从中间将数组一分为二，然后不断分割形成一颗二叉树
+   *  [6,5,7,2,5, 9]
    */
   mergeSort(list: any) {
     return this.sort(list);
