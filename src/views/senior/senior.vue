@@ -163,7 +163,8 @@ export default class Senior extends Vue {
     list = list.concat(left).concat(right);
     return list;
   }
-  sort(arr: any) {
+
+  sort(arr: any): any {
     if (arr.length === 1) {
       return arr;
     }
