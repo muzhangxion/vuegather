@@ -1,5 +1,5 @@
 <template>
-  <div class="Senior same_page">
+  <div class="Algorithm same_page">
     <h1>排序算法</h1>
     <div>
       <h4>冒泡排序</h4>
@@ -30,7 +30,7 @@ import { Options, Vue } from "vue-class-component";
 @Options({
   components: {},
 })
-export default class Senior extends Vue {
+export default class Algorithm extends Vue {
   bubblingList: Array<any> = [1, 4, 6, 2, 67, 45, 0, 11];
   chooseList: Array<any> = [9, 0, 18, 2, 57, 33, 0, 10];
   insertList: Array<any> = [5, 4, 9, 11, 23, 8, 35, 11];

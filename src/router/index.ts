@@ -27,9 +27,9 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('~@/views/slot/slot.vue')
   },
   {
-    path: '/senior',
-    name: 'senior',
-    component: () => import('~@/views/senior/senior.vue')
+    path: '/algorithm',
+    name: 'algorithm',
+    component: () => import('~@/views/algorithm/algorithm.vue')
   }
 ]
 
