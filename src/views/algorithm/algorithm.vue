@@ -1,26 +1,49 @@
 <template>
-  <div class="Algorithm same_page">
-    <h1>排序算法</h1>
-    <div>
-      <h4>冒泡排序</h4>
-      <p>{{ bubbling(bubblingList) }}</p>
+  <div class="algorithm same_page">
+    <div class="algorithm_type">
+      <h1>排序算法</h1>
+      <div>
+        <h4>冒泡排序</h4>
+        <p>{{ bubbling(bubblingList) }}</p>
+      </div>
+      <div>
+        <h4>选择排序</h4>
+        <p>{{ choose(chooseList) }}</p>
+      </div>
+      <div>
+        <h4>插入排序</h4>
+        <p>{{ insert(insertList) }}</p>
+      </div>
+      <div>
+        <h4>快速排序</h4>
+        <p>{{ fast(fastList) }}</p>
+      </div>
+      <div>
+        <h4>归并排序</h4>
+        <p>{{ mergeSort(mergeList) }}</p>
+      </div>
     </div>
-    <div>
-      <h4>选择排序</h4>
-      <p>{{ choose(chooseList) }}</p>
+
+    <div class="algorithm_type">
+      <h1>递归算法</h1>
+      <div>
+        <h4>求1，2，3...n 的和</h4>
+        <p>{{sum(10)}}</p>
+      </div>
+      <div>
+        <h4>求1，2，3...n 的阶乘</h4>
+        <p>{{factorial(5)}}</p>
+      </div>
+      <div>
+        <h4>斐波那契数列,第n个数等于前两个数的和，除第一个数跟第二个树外：如1,1,2,3,5,8,11,19,30...</h4>
+        <p>{{nFibonacciSequence(4)}}</p>
+      </div>
+      <div>
+        <h4>杨辉三角</h4>
+        <p>{{Print(5)}}</p>
+      </div>
     </div>
-    <div>
-      <h4>插入排序</h4>
-      <p>{{ insert(insertList) }}</p>
-    </div>
-    <div>
-      <h4>快速排序</h4>
-      <p>{{ fast(fastList) }}</p>
-    </div>
-    <div>
-      <h4>归并排序</h4>
-      <p>{{ mergeSort(mergeList) }}</p>
-    </div>
+    
   </div>
 </template>
 
@@ -37,8 +60,12 @@ export default class Algorithm extends Vue {
   fastList: Array<any> = [12, 3, 25, 7, 7, 24, 35, 24];
   mergeList: Array<any> = [6,5,7,2,5, 9];
   mounted() {
-    console.log("Senior");
+    console.log("algorithm");
   }
+
+  /**
+   * 排序
+   */
 
   // 冒泡排序
   /**
@@ -179,8 +206,63 @@ export default class Algorithm extends Vue {
     let mid = Math.floor((arr.length + 1) / 2);
     return this.merge(this.sort(arr.slice(0, mid)), this.sort(arr.slice(mid)));
   }
+
+  /**
+   * 递归
+   */
+
+  // 求1，2...n的和
+  sum(n: number): any {
+    if(n === 1) {
+      return 1
+    }
+    return n + this.sum(n-1)
+  }
+
+  // 求1,2,3...到n的阶乘
+  factorial(n: number): any {
+    if(n === 1) {
+      return 1
+    }
+
+    return n * this.factorial(n-1)
+  }
+
+  // 斐波那契数列,第n个数等于前两个数的和，除第一个数跟第二个树外：如1,1,2,3,5,8,11,19,30...
+  nFibonacciSequence(n: number): any{
+    if(n===1 || n===2){
+      return 1;
+    }
+    return this.nFibonacciSequence(n-1) +  this.nFibonacciSequence(n-2)
+  }
+
+  // 杨辉三角
+  combination(m: number, n: number): any{
+    if(n == 0) {//第一个数为1
+      return 1
+    }else if(m == n){//最后一个数为1
+      return 1
+    }else {
+      return this.combination(m-1, n-1) + this.combination(m-1, n);
+    }//中间的数为前一行的两个数相加
+  }
+  Print(n: number){ 
+    for( var i = 0 ; i < n ; i++ ){
+      let arr=[];//用来放第i行的数
+      for ( var j = 0 ; j <= i ; j++ ) {
+          arr.push(this.combination(i,j));
+      }
+       console.log(arr.join(' '))//字符串形式输出
+    }
+   
+  }
+
 }
 </script>
 
 <style lang="less" scoped>
+.algorithm{
+  display: flex;
+  justify-content: space-around;
+}
 </style>
