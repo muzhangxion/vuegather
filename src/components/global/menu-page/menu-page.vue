@@ -8,6 +8,7 @@
     <router-link to="/Upload">Upload</router-link>
     <router-link to="/testVideo">Video</router-link>
     <router-link to="/analysisExcel">analysisExcel</router-link>
+    <router-link to="/viewPdf">viewPdf</router-link>
     <router-link to="/algorithm">algorithm</router-link>
   </div>
 </template>
