@@ -30,6 +30,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/algorithm',
     name: 'algorithm',
     component: () => import('~@/views/algorithm/algorithm.vue')
+  },
+  {
+    path: '/way',
+    name: 'way',
+    component: () => import('~@/views/way/way.vue')
   }
 ]
 
